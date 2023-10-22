@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 28vw;
+    height: 80vh;
+    display: flex;
+    overflow: hidden;
+    margin: 0 4em;
+}
+.slide {
+    opacity: 0;
+    transition: transform .8s ease-in;
+    transition: opacity .8s ease-in;
+    position: relative;
+}
+.text-container{
+    bottom: -50%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    transition: all .6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33333398;
+}
+.text{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.active{
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 1;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .7;
+    transition: all .6s ease-out;
+}
+.btn{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: .6;
+    transition: all .4s ease;
+}
+.btn:hover{
+    opacity: 1;
+}
+.slide:hover img{
+    opacity: .9;
+    filter: blur(0);
+    transform: scale(1.1);
+}
+.slide:hover .text-container{
+    bottom: 0;
+}
